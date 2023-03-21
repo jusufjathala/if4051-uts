@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>ESP</title>
+</head>
+<body>
+    <h1>ESP Web App</h1> 
+    <p>Dibuat oleh 13519174 - Jusuf Junior Athala </p>
+    <p>LED state: </p>
+    <p> {{state}} </p>
+    <form method="post" action="/">
+        <input type="submit" value="CHECK_STATE" name="check_button" />
+        <input type="submit" value="TURN_ON" name="on_button"/>
+        <input type="submit" value="TURN_OFF" name="off_button" />
+    </form>
+   <br>
+   <p>Cara menggunakan</p>
+   <p>1. ESP32 harus sudah terhubung dengan internet dan terhubung dengan broker. </p>
+   <p>2. Klik Tombol CHECK_STATE untuk memeriksa keadaan nyala/mati lampu LED</p>
+   <p>3. Klik Tombol TURN_ON untuk menyalakan lampu LED</p>
+   <p>4. Klik Tombol TURN_OFF untuk mematikan lampu LED</p>
+   <p>5. Keadaan lampu LED akan diperiksa setiap kali tombol CHECK_STATE, TURN_ON, atau TURN_OFF ditekan </p>
+   <p>6. Tombol CHECK_STATE perlu ditekan setiap tombol TURN_ON atau TURN_OFF ditekan agar aplikasi dapat 
+    menampilkan keadaan lampu LED yang tepat </p>
+</body>
+</html>
